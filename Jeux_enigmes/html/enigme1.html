@@ -6,7 +6,22 @@
         <title>Enigme 1</title>
         <link rel="stylesheet" href="../css/styles.css">
         <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-        <script src="../js/scripts1.js" defer></script>
+        <script>
+            window.addEventListener("load", function () {
+                const reponse = document.getElementById("reponse");
+                const pageSuivante = document.getElementById("pageSuivante")
+                const submit = document.getElementById("submit").addEventListener("click", function (e)
+                  {
+                      e.preventDefault();
+                      if (reponse.value.toLowerCase().replace(/ /g,'') !== "884800")
+                        {
+                            return alert(`Mauvaise réponse ! Quelle est la hauteur de l'Everest en cm ? `)
+                        }
+
+                          pageSuivante.classList.remove("main__section--cachee")
+                  });
+            });
+          </script>
     </head>
     <body class="body">
         <header class="body__header">

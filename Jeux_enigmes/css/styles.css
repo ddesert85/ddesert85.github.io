@@ -1,9 +1,18 @@
+
 .body{
-    width: 80%;
+    width: 70%;
     margin: auto;
-    background-color: rgba(0, 247, 255, 0.68);
-    
+    background-color: rgba(166, 223, 225, 0.96);
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
 }
+
+blockquote{
+    font-style: italic;
+    font-size: 80%;
+}
+
+
 
 .body__header {
     text-align: center;
@@ -23,6 +32,49 @@
     margin: 2%;
    
 }
+
+
+.aside__image{
+    max-width: auto;
+    width:50%;
+    height: 50%;
+
+}
 .main__section--cachee {
     display: none;
+}
+
+.piano {
+    width: 50%;
+    display: flex;
+}
+
+.touchesBloc {
+    display: flex;
+    position: relative;
+}
+
+.blanche {
+    background-color: rgb(252, 242, 227);
+    color: red;
+    height: 10em;
+    width: 3em;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.noire {
+    background-color: black;
+    color: red;
+    height: 6em;
+    width: 1em;
+    position: absolute;
+    z-index: 1;
+    right: -8px;
+    border-radius: 5px;
+    cursor: pointer;
+
 }

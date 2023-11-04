@@ -6,7 +6,26 @@
         <title>Chasse au Trésor</title>
         <link rel="stylesheet" href="../css/styles.css">
         <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-        <script src="../js/scripts0.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/fr.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                const reponse = document.getElementById("reponse");
+                const pageSuivante = document.getElementById("pageSuivante")
+                const day1= dayjs().locale('fr').format('dddd')
+                const submit = document.getElementById("submit").addEventListener("click", function(e) 
+                {
+                    e.preventDefault();
+                    if (reponse.value.toLowerCase().replace(/ /g,'') !== day1)
+                      {
+                        return alert("Mauvaise réponse")
+                      }
+                    
+                    pageSuivante.classList.remove("main__section--cachee")
+                    
+                });
+            })
+          </script>
     </head>
     <body class="body">
         <header class="body__header">
