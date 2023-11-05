@@ -4,38 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chasse au Trésor</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
         <link rel="stylesheet" href="../css/styles.css">
-        <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/fr.js"></script>
-        <script type="text/javascript">
-            window.addEventListener("load", function () {
-                const reponse = document.getElementById("reponse");
-                const pageSuivante = document.getElementById("pageSuivante")
-                const day1= dayjs().locale('fr').format('dddd')
-                const submit = document.getElementById("submit").addEventListener("click", function(e) 
-                {
-                    e.preventDefault();
-                    if (reponse.value.toLowerCase().replace(/ /g,'') !== day1)
-                      {
-                        return alert("Mauvaise réponse")
-                      }
-                    
-                    pageSuivante.classList.remove("main__section--cachee")
-                    
-                });
-            })
-          </script>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     </head>
+    
+
     <body class="body">
-        <header class="body__header">
-            <h1 class="header__titre">accueil du jeu !</h1>
+
+        <header id = "header" class="body__header">
+
+
+            <h2 class="header__titre">accueil du jeu !</h2>
             <img class= "header__image" src="../images/oyeoye.jpg" alt="troubadour">
             <blockquote class="header__blockquote">
                 (ndlr : pour des raisons de gestion des coûts de l’utilisation d’un site web dédié à ce jeu, M. Antonin Desert, 
                 Président de la SAS DESERT Rénovation, nous offre d’héberger notre jeu sur son site internet. Merci Président !)
             </blockquote>
         </header>
+
 
         <main class="body__main">
             <aside class="main__aside">
@@ -61,13 +53,40 @@
                 <button id="submit" type="submit" >OK</button>
             </section>
             <section class="main__section main__section--cachee" id="pageSuivante">
-                <a href="enigme1.html">Bravo, Click sur le lien pour la suite</a>
+                <a href="enigme1_montagne.html">Bravo, Click sur le lien pour la suite</a>
             </section>
+
+            
         </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/fr.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                const reponse = document.getElementById("reponse");
+                const pageSuivante = document.getElementById("pageSuivante")
+                const day1= dayjs().locale('fr').format('dddd')
+                const submit = document.getElementById("submit").addEventListener("click", function(e) 
+                {
+                    e.preventDefault();
+                    if (reponse.value.toLowerCase().replace(/ /g,'') !== day1)
+                      {
+                        return alert("Mauvaise réponse")
+                      }
+                    
+                    pageSuivante.classList.remove("main__section--cachee")
+                    
+                });
+            })
+        </script>
+
+        <script src="../js/index.js"></script>
 
         <footer>
 
         </footer>
+
+
 
         
     </body>

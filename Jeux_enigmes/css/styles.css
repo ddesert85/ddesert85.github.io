@@ -1,8 +1,39 @@
+/* Naviguation dans DOM JS */
+.nav {
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 3em;
+    display: flex;
+    border-radius: 50px;
+}
+
+.nav__link {
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav__img {
+
+    max-height:150%;
+    filter: invert(100%);
+}
+
+.nav__title {
+
+    margin: auto;
+    text-align: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 3em;
+    color: #0e8dbc;
+}
+
+/* FIn Naviguation dans DOM JS */
 
 .body{
-    width: 70%;
+    width: 80%;
     margin: auto;
-    background-color: rgba(166, 223, 225, 0.96);
     font-family: 'Poppins', sans-serif;
     text-align: justify;
 }
@@ -16,11 +47,25 @@ blockquote{
 
 .body__header {
     text-align: center;
+
+
 }
 
 
 .header__titre {
+    width: 30%;
+    margin: auto;
     text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 2%;
+    padding: 1%;
+    border: 5px rgb(123, 197, 129) outset;
+    border-radius: 50px;
+
+    color: #FFFFFF;
+    background: #0e8dbc;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    color: #FFFFFF;
 }
 
 

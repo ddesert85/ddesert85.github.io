@@ -3,29 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Enigme 1</title>
+        <title>Chasse au Trésor</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
         <link rel="stylesheet" href="../css/styles.css">
-        <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-        <script>
-            window.addEventListener("load", function () {
-                const reponse = document.getElementById("reponse");
-                const pageSuivante = document.getElementById("pageSuivante")
-                const submit = document.getElementById("submit").addEventListener("click", function (e)
-                  {
-                      e.preventDefault();
-                      if (reponse.value.toLowerCase().replace(/ /g,'') !== "884800")
-                        {
-                            return alert(`Mauvaise réponse ! Quelle est la hauteur de l'Everest en cm ? `)
-                        }
-
-                          pageSuivante.classList.remove("main__section--cachee")
-                  });
-            });
-          </script>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     </head>
+
+
     <body class="body">
-        <header class="body__header">
-            <h1 class="header__titre">Enigme 1</h1>
+        <header class="body__header" id="header">
+            <h2 class="header__titre">Enigme 1</h2>
             <img class= "header__image" src="" alt="">
             <blockquote class="header__blockquote">
                 Quel jour sommes-nous ? Nous sommes tous les jours, mon amie. Nous sommes toute la vie, mon amour. Nous nous aimons et nous vivons. Nous vivons et nous nous aimons. Et nous ne savons pas ce que c’est que la vie. Et nous ne savons pas ce que c’est que le jour. Et nous ne savons pas ce que c’est que l’amour.
@@ -36,12 +28,12 @@
 
         <main class="body__main">
             <aside class="main__aside">
-                <h2 class="main__titre">L’amour au sommet</h2>
+                <h3 class="main__titre">L’amour au sommet</h3>
                 <cite>Si tu veux atteindre le sommet, n’observe pas la montagne, escalade-là. La volonté permet de grimper sur les cimes ; sans volonté on reste au pied de l’Everest.</cite>
                 <img src="../images/everest.jpg" alt="everest">
             </aside>
             <section>
-                <h2 class="main__titre">Enigme 2 : Quelle est la hauteur de l'Everest ?</h2><!-- 884800cm -->
+                <h3 class="main__titre">Enigme 2 : Quelle est la hauteur de l'Everest ?</h3>
                 <input id ="reponse" type="text" placeholder="Votre réponse"/>
                 <button id ="submit"type="submit" value="">OK</button>
             </section>
@@ -49,6 +41,25 @@
                 <a href="enigme2.html">Bravo, Click sur le lien pour la suite</a>
             </section>
         </main>
+
+        <script>
+          window.addEventListener("load", function () {
+              const reponse = document.getElementById("reponse");
+              const pageSuivante = document.getElementById("pageSuivante")
+              const submit = document.getElementById("submit").addEventListener("click", function (e)
+                {
+                    e.preventDefault();
+                    if (reponse.value.toLowerCase().replace(/ /g,'') !== "884800")
+                      {
+                          return alert(`Mauvaise réponse ! Quelle est la hauteur de l'Everest en cm ? `)
+                      }
+
+                        pageSuivante.classList.remove("main__section--cachee")
+                });
+          });
+        </script>
+
+        <script src = "../js/index.js"></script>
 
         <footer>
 
